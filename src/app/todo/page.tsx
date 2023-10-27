@@ -1,7 +1,7 @@
 const TODO = async () => {
   const res = await fetch('http://localhost:3000/api/todo')
   const todo = await res.json()
-  const todoData = todo.data
+  const todoData: TODO[] = todo.data
 
   return (
     <main className='flex flex-col gap-4'>
